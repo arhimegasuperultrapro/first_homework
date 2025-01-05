@@ -10,12 +10,14 @@ def personal_sum(numbers:(list, tuple, set, dict)):
                 result += numbers[key]
             except TypeError:
                 incorrect_data += 1
+                print(f'В numbers записан некорректный тип данных - {numbers[key]}')
     else:
         for i in numbers:
             try:
                 result += i
             except TypeError:
                 incorrect_data += 1
+                print(f'В numbers записан некорректный тип данных - {i}')
 
     return result, incorrect_data
 
